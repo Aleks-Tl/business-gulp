@@ -1,0 +1,15 @@
+:root {
+  // base
+
+  --font-family: "Manrope";
+  --content-width: 1680px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+
+  --primary: #64607D;
+  --secondary: #EC7A24;
+  --lightColor: #ffffff;
+  --darkColor: #000000;
+}
