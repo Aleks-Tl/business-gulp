@@ -7,7 +7,7 @@
   \*******************************/
 /***/ (() => {
 
-console.log('components');
+
 
 /***/ }),
 
@@ -15,10 +15,13 @@ console.log('components');
 /*!******************************!*\
   !*** ./src/js/_functions.js ***!
   \******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// Реализация бургер-меню
-// import { burger } from './functions/burger';
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
+/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_0__);
+
 
 /***/ }),
 
@@ -53,6 +56,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/functions/burger.js":
+/*!************************************!*\
+  !*** ./src/js/functions/burger.js ***!
+  \************************************/
+/***/ (() => {
+
+(function () {
+  var _document, _document2;
+
+  var burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
+  var menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
+  burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', function (e) {
+    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
+    menu === null || menu === void 0 ? void 0 : menu.classList.toggle('menu--active');
+  });
+})();
 
 /***/ }),
 
@@ -447,13 +469,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_vendor */ "./src/js/_vendor.js");
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
+var btnContainer = document.querySelector('.header .nav__list');
+var items = btnContainer.querySelectorAll('a'),
+    pageBody = document.querySelector('.page__body'),
+    burger = document.querySelector('.burger');
+burger.addEventListener('click', function () {
+  pageBody.classList.toggle('lock');
+}); // activity class
+
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function (e) {
+    if (!e.target.classList.contains('active')) {
+      items.forEach(function (elem) {
+        elem.classList.remove('active');
+      });
+      e.target.classList.add('active');
+    } else {}
+  });
+}
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.querySelector('header').classList.add('backgroundWhite');
+  } else {
+    document.querySelector('header').classList.remove('backgroundWhite');
+  }
+}
 })();
 
 /******/ })()

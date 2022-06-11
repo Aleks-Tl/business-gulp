@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  position: relative;
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
@@ -21,6 +22,11 @@ html {
   min-height: 100%;
   font-size: 22px;
   font-weight: 500;
+  font-style: normal;
+  height: 1000px;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 img {
@@ -34,7 +40,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden;
 }
 
 .is-hidden {
@@ -73,4 +79,26 @@ a {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--lightColor);
+  background-color: var(--secondary);
+  border: 1px solid #F0F0F0;
+  box-shadow: 0px 30px 30px rgba(168, 109, 37, 0.2);
+  border-radius: 8px;
+  transition: all 0.2s ease 0s;
+  padding: 15px 30px;
+  &:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+  }
+  @media (max-width: 992px) {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
 }
