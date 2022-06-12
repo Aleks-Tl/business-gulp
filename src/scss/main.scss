@@ -48,10 +48,8 @@
   // .header__logo
 
   &__logo {
-
       position: relative;
       z-index: 101;
-
     @media (max-width: 992px) {
       img {
         max-width: 80%;
@@ -82,8 +80,6 @@
     }
   }
 
-
-
   // .header__nav
 
   &__nav {
@@ -97,7 +93,6 @@
       padding-top: 20px;
     }
     @media (max-width: 768px) {
-      //display: none;
       position: absolute;
       background-color: var(--lightColor);
       top: 0;
@@ -116,6 +111,12 @@
 
   &__btn {
     margin-left: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media (max-width: 992px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
    @media (max-width: 1700px) {
       margin-left: 80px;
     }
@@ -186,10 +187,207 @@
 
     &__link {}
   }
-  &.backgroundWhite {
+  &.fixedMenu {
     box-shadow: 3px 3px 7px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 99;
+    @media (max-width: 768px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 }
+
+// Hero section
+
+.hero {
+  padding-top: 260px;
+  padding-bottom: 210px;
+  position: relative;
+  background-image: url('../img/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  @media (max-width: 1400px) {
+    padding-top: 220px;
+    padding-bottom: 150px;
+  }
+  @media (max-width: 992px) {
+    padding-top: 180px;
+    background: none;
+  }
+  @media (max-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  // .hero__wrap
+
+  &__wrap {
+
+  }
+
+  // .hero__image
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    @media (max-width: 1800px) {
+      max-width: 60%;
+    }
+    @media (max-width: 1200px) {
+      max-width: 50%;
+    }
+    @media (max-width: 768px) {
+      position: static;
+      max-width: 70%;
+      display: block;
+      margin: 50px auto;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    margin: 0;
+    font-size: 115px;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+    color: #313131;
+    max-width: 1020px;
+    @media (max-width: 1800px) {
+      font-size: 100px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 90px;
+      line-height: 110%;
+    }
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      font-size: 80px;
+    }
+    @media (max-width: 992px) {
+      font-size: 60px;
+    }
+    @media (max-width: 768px) {
+      font-size: 45px;
+    }
+    @media (max-width: 576px) {
+      font-size: 32px;
+    }
+    span {
+      color: var(--secondary);
+    }
+  }
+
+  // .hero__descr
+
+  &__descr {
+    margin-top: 80px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    max-width: 740px;
+    @media (max-width: 1800px) {
+      max-width: 700px;
+    }
+    @media (max-width: 1400px) {
+      margin-top: 50px;
+      max-width: 600px;
+    }
+    @media (max-width: 992px) {
+      font-size: 20px;
+      margin-top: 30px;
+      max-width: 500px;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+    @media (max-width: 576px) {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+  }
+
+  // .hero__btn
+
+  &__btn {
+    margin-top: 40px;
+    padding-right: 65px;
+    padding-left: 65px;
+    @media (max-width: 576px) {
+      display: block;
+      max-width: fit-content;
+      margin: 30px auto;
+    }
+  }
+}
+
+// Clients section
+
+.clients {
+  padding-bottom: 180px;
+  @media (max-width: 992px) {
+    padding-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+  // .clients__title
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: var(--darkColor);
+    @media (max-width: 992px) {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    @media (max-width: 576px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  // .clients__wrap
+
+  &__wrap {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 40px;
+    align-items: center;
+    @media (max-width: 1500px) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 40px;
+    }
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+  }
+
+  // .clients__item
+
+  &__item {
+    justify-self: center;
+  }
+}
+
+
+
 
 
 

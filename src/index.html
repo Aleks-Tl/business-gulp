@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Business</title>
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-
-</head>
+@include('partials/head.html')
 
 <body class="page__body">
   <div class="site-container">
     @include('partials/header.html')
+    <section class="hero">
+      <div class="container">
+        <div class="hero__wrap">
+          <div class="hero__info">
+            <h1 class="hero__title">Get the data your <span>business</span> needs to grow!</h1>
+            <div class="hero__descr">We`re experts at gathering data throught market research and modern technology
+              about your customers and competitors. Let us help you get the information required to make the decisions
+              needed to progress your business forward.</div>
+            <a href="#" class="hero__btn btn btn-reset">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <picture>
+        <!-- <source srcset="img/hero-image.avif" type="image/avif">
+        <source srcset="img/hero-image.webp" type="image/webp"> -->
+        <img loading="lazy" src="img/hero-image.png" class="hero__image" alt="Hero image">
+      </picture>
+    </section>
+
+    @include('partials/clients.html')
 
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример include -->

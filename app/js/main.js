@@ -500,9 +500,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.querySelector('header').classList.add('backgroundWhite');
+    document.querySelector('header').classList.add('fixedMenu');
   } else {
-    document.querySelector('header').classList.remove('backgroundWhite');
+    document.querySelector('header').classList.remove('fixedMenu');
   }
 }
 })();
