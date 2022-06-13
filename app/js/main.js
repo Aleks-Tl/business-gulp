@@ -505,16 +505,21 @@ function scrollFunction() {
     document.querySelector('header').classList.remove('fixedMenu');
   }
 }
-/* let accordionCollapse = document.querySelectorAll('.accordion-collapse'),
-  why = document.querySelector('.why');
 
-accordionCollapse.forEach(elem => {
-  if (!elem.classList.contains('show')) {
-    why.style.backgroundColor = 'red';
-  } else {
-    why.style.backgroundColor = 'yellow';
-  }
-}) */
+var why = document.querySelector('.why'),
+    widthScreen = document.documentElement.clientWidth;
+
+if (widthScreen >= 992) {
+  why.querySelectorAll('.accordion-button').forEach(function (elem) {
+    elem.addEventListener('click', function () {
+      if (elem.classList.contains('collapsed')) {
+        why.style.paddingBottom = "220px";
+      } else {
+        why.style.paddingBottom = "0px";
+      }
+    });
+  });
+}
 })();
 
 /******/ })()

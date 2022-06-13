@@ -935,7 +935,6 @@ a {
 .why {
   position: relative;
   padding-top: 90px;
-  padding-bottom: 220px;
 }
 @media (max-width: 992px) {
   .why {
@@ -962,12 +961,7 @@ a {
   }
 }
 .why__accordion {
-  margin-top: 10px;
-}
-@media (max-width: 992px) {
-  .why__accordion {
-    margin-top: 40px;
-  }
+  margin-top: 40px;
 }
 @media (max-width: 768px) {
   .why__accordion {
