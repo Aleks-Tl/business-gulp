@@ -238,8 +238,12 @@
     position: absolute;
     right: 0;
     bottom: 40px;
+    z-index: -1;
     @media (max-width: 1800px) {
       max-width: 60%;
+    }
+    @media (max-width: 1400px) {
+      max-width: 47%;
     }
     @media (max-width: 1200px) {
       max-width: 50%;
@@ -385,6 +389,302 @@
     justify-self: center;
   }
 }
+
+// Helping section
+
+.helping {
+  padding-bottom: 90px;
+  @media (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+  // .helping__title
+
+  &__title {}
+
+  // .helping__wrap
+
+  &__wrap {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    @media (max-width: 1200px) {
+      justify-content: center;
+      column-gap: 40px;
+    }
+    @media (max-width: 576px) {
+      row-gap: 30px;
+    }
+  }
+
+  // .helping__item
+
+  &__item {
+    max-width: calc(100% / 3 - 25px);
+    padding: 45px 24px;
+    text-align: center;
+    background-color: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background: var(--lightColor);
+      border: 1px solid rgba(239, 239, 239, 0.6);
+      box-shadow: 0px 30px 30px rgba(99, 122, 166, 0.1);
+    }
+    @media (max-width: 1200px) {
+      max-width: calc(100% / 2 - 25px);
+    }
+    @media (max-width: 992px) {
+      background: var(--lightColor);
+      border: 1px solid rgba(239, 239, 239, 0.6);
+      box-shadow: 0px 30px 30px rgba(99, 122, 166, 0.1);
+
+    }
+    @media (max-width: 768px) {
+      max-width: 544px;
+      padding: 30px 15px;
+    }
+  }
+
+  // .helping__img
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    background: #ECECEC;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    @media (max-width: 576px) {
+      width: 70px;
+      height: 70px;
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+
+  // .helping__name
+
+  &__name {
+    margin-top: 65px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: var(--darkColor);
+    @media (max-width: 1200px) {
+      margin-top: 40px;
+    }
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  // .helping__descr
+
+  &__descr {
+    margin-top: 15px;
+    line-height: 160%;
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
+  }
+}
+
+
+// Section Why Choose Business Evalutation Services?
+
+.why {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 220px;
+  @media (max-width: 992px) {
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 70px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+  // .why__title
+
+  &__title {
+    max-width: 995px;
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+  }
+
+  // .why__accordion
+
+  &__accordion {
+    margin-top: 10px;
+    @media (max-width: 992px) {
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+  .accordion {
+    max-width: 800px;
+    @media (max-width: 1400px) {
+      max-width: 680px;
+    }
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+  }
+  .accordion-item {
+    border: none;
+    outline: none;
+  }
+  .accordion-header {
+
+  }
+  .accordion-button {
+    background: transparent ;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    padding-left: 0;
+    color: #2D2D2D;
+    border-bottom: 2px solid rgba(174, 174, 174, 0.4);
+    position: relative;
+    &:not(.collapsed) {
+      color: var(--secondary);
+      border-bottom: none;
+      &::before {
+        width: 0;
+        height: 0;
+      }
+      &:after {
+        background-color: var(--secondary);
+      }
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -25px;
+      background-image: none;
+      width: 28px;
+      height: 3px;
+      background-color: var(--darkColor);
+      bottom: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      @media (max-width: 992px) {
+        right: 0;
+        width: 18px;
+      }
+      @media (max-width: 576px) {
+        height: 2px;
+        width: 14px;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -12px;
+      background-image: none;
+      width: 3px;
+      height: 28px;
+      background-color: var(--darkColor);
+      bottom: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      @media (max-width: 992px) {
+        right: 8px;
+        height: 18px;
+      }
+      @media (max-width: 576px) {
+        height: 14px;
+        width: 2px;
+        right: 6px;
+      }
+    }
+    @media (max-width: 992px) {
+      font-size: 22px;
+      padding-right: 40px;
+    }
+    @media (max-width: 576px) {
+      font-size: 18px;
+      padding-right: 30px;
+    }
+  }
+  .accordion-collapse {
+
+  }
+  .collapse {
+
+
+  }
+  .show {
+
+  }
+  .accordion-body {
+    background: var(--lightColor);
+    border: 1px solid rgba(239, 239, 239, 0.6);
+    box-shadow: 0px 30px 30px rgba(99, 122, 166, 0.1);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    @media (max-width: 992px) {
+      font-size: 19px;
+    }
+    @media (max-width: 576px) {
+      font-size: 17px;
+      margin-top: 10px;
+    }
+    &.show {
+      outline: 10px solid red;
+    }
+  }
+  .collapsed {
+
+  }
+
+  // .why__image
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: -1;
+    @media (max-width: 1800px) {
+      max-width: 50%;
+    }
+    @media (max-width: 1700px) {
+      top: 170px;
+    }
+    @media (max-width: 1600px) {
+      max-width: 40%;
+    }
+    @media (max-width: 1200px) {
+      max-width: 30%;
+    }
+    @media (max-width: 992px) {
+      position: static;
+      max-width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+
 
 
 

@@ -8,6 +8,9 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 .page {
   position: relative;
   height: 100%;
@@ -93,9 +96,10 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
   display: inline-block;
+  box-shadow: none;
   &:hover {
     color: var(--primary);
-    background-color: transparent;
+    background-color: var(--lightColor);
     border: 1px solid var(--secondary);
   }
   @media (max-width: 992px) {
@@ -103,4 +107,62 @@ a {
     padding-top: 8px;
     padding-bottom: 8px;
   }
+}
+
+// .title-sm
+
+.title-sm {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 60px;
+  letter-spacing: -0.03em;
+  color: var(--darkColor);
+  position: relative;
+  text-align: center;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 166px;
+    height: 4px;
+    background-color: var(--secondary);
+    @media (max-width: 576px) {
+      width: 80px;
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media (max-width: 576px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.title-big {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--darkColor);
+    span {
+      color: var(--secondary);
+    }
+    @media (max-width: 1400px) {
+      font-size: 75px;
+      line-height: 110%;
+    }
+    @media (max-width: 992px) {
+      text-align: center;
+      font-size: 60px;
+    }
+    @media (max-width: 768px) {
+      font-size: 50px;
+    }
+    @media (max-width: 576px) {
+      font-size: 30px;
+    }
 }

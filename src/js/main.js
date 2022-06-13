@@ -38,3 +38,13 @@ function scrollFunction() {
   }
 }
 
+/* let accordionCollapse = document.querySelectorAll('.accordion-collapse'),
+  why = document.querySelector('.why');
+
+accordionCollapse.forEach(elem => {
+  if (!elem.classList.contains('show')) {
+    why.style.backgroundColor = 'red';
+  } else {
+    why.style.backgroundColor = 'yellow';
+  }
+}) */
