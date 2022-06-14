@@ -41,7 +41,7 @@ function scrollFunction() {
 let why = document.querySelector('.why'),
   widthScreen = document.documentElement.clientWidth;
 
-if (widthScreen >= 992) {
+if (widthScreen >= 1600) {
   why.querySelectorAll('.accordion-button').forEach(elem => {
     elem.addEventListener('click', () => {
       if (elem.classList.contains('collapsed')) {
